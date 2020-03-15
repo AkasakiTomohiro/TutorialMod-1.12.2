@@ -6,3 +6,4 @@ itemGroup.tutorial_tab=Tutorial Tab
 # Items
 item.tutorial_item.name=Tutorial Item
 item.tutorial_food.name=Tutorial Food
+item.tutorial_seed.name=Tutorial Seed
