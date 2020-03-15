@@ -4,7 +4,6 @@ import jp.artan.tm.TutorialMod;
 import jp.artan.tm.event.IItemRegisterEvent;
 import jp.artan.tm.init.ItemInit;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -16,6 +15,7 @@ public class TutorialItem extends Item implements IItemRegisterEvent {
     private final String name;
 
     public TutorialItem(String name) {
+        super();
         this.name = name;
         this.setUnlocalizedName(this.name);
         this.setRegistryName(TutorialMod.MODID, this.name);
@@ -29,6 +29,7 @@ public class TutorialItem extends Item implements IItemRegisterEvent {
         event.getRegistry().register(this);
     }
 
+    @Override
     public void registerModel(ModelRegistryEvent event) {
         ModelLoader.setCustomModelResourceLocation(this, 0,
                 new ModelResourceLocation(new ResourceLocation(TutorialMod.MODID, this.name), "inventory"));
