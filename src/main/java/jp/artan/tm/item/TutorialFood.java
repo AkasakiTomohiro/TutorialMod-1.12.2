@@ -5,17 +5,18 @@ import jp.artan.tm.event.IItemRegisterEvent;
 import jp.artan.tm.init.ItemInit;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 
-public class TutorialItem extends Item implements IItemRegisterEvent {
+public class TutorialFood extends ItemFood implements IItemRegisterEvent {
 
     private final String name;
 
-    public TutorialItem(String name) {
-        super();
+    public TutorialFood(String name, int amount, float saturation) {
+        super(amount, saturation, false);
         this.name = name;
         this.setUnlocalizedName(this.name);
         this.setRegistryName(TutorialMod.MODID, this.name);
