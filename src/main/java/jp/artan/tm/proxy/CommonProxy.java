@@ -1,7 +1,9 @@
 package jp.artan.tm.proxy;
 
 import jp.artan.tm.TutorialMod;
+import jp.artan.tm.init.BlockInit;
 import jp.artan.tm.init.ItemInit;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -28,5 +30,11 @@ public abstract class CommonProxy {
     public void registerItems(RegistryEvent.Register<Item> event) {
         TutorialMod.logger.info("CommonProxy.registerItems");
         ItemInit.ITEMS.forEach(f -> f.registerItem(event));
+    }
+
+    @SubscribeEvent
+    public void registerBlocks(RegistryEvent.Register<Block> event) {
+        TutorialMod.logger.info("CommonProxy.registerBlocks");
+        BlockInit.BLOCKS.forEach(f -> f.registerBlock(event));
     }
 }

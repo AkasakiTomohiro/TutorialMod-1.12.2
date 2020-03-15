@@ -1,0 +1,28 @@
+{
+    "variants": {
+        "age=0": {
+            "model": "tm:tutorial_plant0"
+        },
+        "age=1": {
+            "model": "tm:tutorial_plant1"
+        },
+        "age=2": {
+            "model": "tm:tutorial_plant2"
+        },
+        "age=3": {
+            "model": "tm:tutorial_plant3"
+        },
+        "age=4": {
+            "model": "tm:tutorial_plant4"
+        },
+        "age=5": {
+            "model": "tm:tutorial_plant5"
+        },
+        "age=6": {
+            "model": "tm:tutorial_plant6"
+        },
+        "age=7": {
+            "model": "tm:tutorial_plant7"
+        }
+    }
+}
