@@ -1,6 +1,8 @@
 package jp.artan.tm;
 
 import jp.artan.tm.proxy.CommonProxy;
+import jp.artan.tm.tab.TutorialTab;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -24,6 +26,8 @@ public class TutorialMod
 
     @SidedProxy(clientSide = CLIENT_PROXY, serverSide = SERVER_PROXY)
     public static CommonProxy proxy;
+
+    public static CreativeTabs creativeTabs = new TutorialTab();
 
     @Mod.EventHandler
     public void construct(FMLConstructionEvent event) {

@@ -19,7 +19,7 @@ public class TutorialItem extends Item implements IItemRegisterEvent {
         this.name = name;
         this.setUnlocalizedName(this.name);
         this.setRegistryName(TutorialMod.MODID, this.name);
-        this.setCreativeTab(CreativeTabs.MISC);
+        this.setCreativeTab(TutorialMod.creativeTabs);
 
         ItemInit.ITEMS.add(this);
     }
